@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
                 energy = maxEnergy;
                 PlayerPrefs.SetInt(EnergyKey, energy);
             }
-            else //if it's not ready yet, just call the function again after the correct time
+            else //if it's not ready yet, just call the function again after the correct time. Works when app is still on.
             {
                 Invoke(nameof(EnergyRecharged), (energyReady - DateTime.Now).Seconds);
             }
